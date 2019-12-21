@@ -1,0 +1,68 @@
+<!doctype html>
+<style>
+
+
+    table {
+  border-collapse: collapse;
+  width: 100%;
+}
+body {
+  background-color: LightGray;
+}
+table th{
+   text-align:left;
+   background-color: #3a6070;
+   color:#FFF;
+   padding: 4px 30px 4px 8px;
+}
+
+table td {
+  border:1px solid #e3e3e3;
+  padding: 4px 8px;
+  text-align: left;
+}
+tr:nth-child(odd){
+background-color: #e7edf0;
+
+}
+
+
+
+</style>
+<html>
+<body>
+ <h1>Customers</h1>
+
+<table>
+    <TR>
+   <TH> CustomerID</TH>
+    <TH> FirstName</TH>
+    <TH> LastName</TH>
+        <TH> Balance</TH>
+                <TH> City</TH>
+                        <TH> DateOfCreation</TH>
+
+
+
+
+</TR>
+{% for dict_item in items %}
+
+<TR>
+    <TD> {{dict_item['CustomerID']}}</TD>
+   <TD> {{dict_item['FirstName']}}</TD>
+    <TD> {{dict_item['LastName']}}</TD>
+        <TD> {{dict_item['Balance']}}</TD>
+        <TD> {{dict_item['City']}}</TD>
+
+    <TD> {{dict_item['DateOfCreation']}}</TD>
+
+
+
+
+</TR>
+
+{% endfor %}
+</table>
+</body>
+</html>

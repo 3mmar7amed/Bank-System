@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<style>
+body {
+  background-color: LightGray;
+}
+</style>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+
+<ul>
+
+{% for dict_item in item %}
+<li><font size="6">Name: {{dict_item["FirstName"]}} {{dict_item["LastName"]}}</font>
+</li>
+<li><font size="6">Balance: {{dict_item["Balance"]}}</font></li>
+<li><font size="6">City:{{dict_item["City"]}}</font></li>
+{% endfor %}
+    </ul>
+
+      <button onclick="window.location.href = '/loans';">Loan </button>&nbsp; &nbsp; &nbsp; &nbsp;
+      <button onclick="window.location.href = '/Withdraw';">Withdraw </button>&nbsp; &nbsp; &nbsp; &nbsp;
+      <button onclick="window.location.href = '/Depositor';">Depositor </button>&nbsp; &nbsp; &nbsp; &nbsp;
+      <button onclick="window.location.href = '/Transations';">Transactions </button>&nbsp;
+      <button onclick="window.location.href = '/askforloan';">AskForLoan </button>&nbsp;
+
+
+
+</a>
+
+</body>
+      <button onclick="window.location.href = '/signout';">Sign out</button>
+
+
+</html>

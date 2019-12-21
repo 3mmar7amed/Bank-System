@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<style>
+    table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table th{
+   text-align:left;
+   background-color: #3a6070;
+   color:#FFF;
+   padding: 4px 30px 4px 8px;
+}
+
+table td {
+  border:1px solid #e3e3e3;
+  padding: 4px 8px;
+  text-align: left;
+}
+tr:nth-child(odd){
+background-color: #e7edf0;
+
+}
+
+
+
+</style>
+<html >
+<head>
+    <title>WITHDRAW</title>
+</head>
+<body>
+ <h1>Withdraw</h1>
+<table>
+    <TR>
+   <TH> WithdarwID</TH>
+    <TH> OwnerID</TH>
+    <TH> Amount</TH>
+        <TH> DateOfCreation</TH>
+
+
+
+
+</TR>
+{% for dict_item in items %}
+<TR>
+    <TD> {{dict_item['ID']}}</TD>
+        <TD> {{dict_item['OwnerID']}}</TD>
+        <TD> {{dict_item['Amount']}}</TD>
+
+    <TD> {{dict_item['DateOfCreation']}}</TD>
+</TR>
+{% endfor %}
+    <a href="/index">Home </a>
+
+
+</table>
+ <a href="/signout">Signout </a>
+
+</body>
+</html>
